@@ -13,8 +13,7 @@ def md2pdf():
     file = request.files['file']
     filename=secure_filename(file.filename)
     file.save(get_file_path(filename))
-    output = pypandoc.convert_file(get_file_path(filename), 'pdf', outputfile='file.pdf
-        ')
+    output = pypandoc.convert_file(get_file_path(filename), 'pdf', outputfile='file.pdf')
     return send_file('file.pdf', mimetype='application/pdf')
 else:
     return '''
