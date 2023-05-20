@@ -23,8 +23,8 @@ else:
     <h1>Upload new File</h1>
     <form method=post enctype=multipart/form-data>
     <input type=file name=file>
-     <input type=submit value=Upload>
-     </form>
-     '''
+    <input type=submit value=Upload>
+    </form>
+    '''
 if __name__ == "__main__":
-     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
